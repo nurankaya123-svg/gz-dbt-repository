@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw # dbt içinde kullanacağınız takma ad (alias)
+    schema: gz_raw_data # BigQuery'deki GERÇEK veri kümesi (dataset) adı
+    tables:
+      - name: sales # dbt içinde çağıracağınız kısa ad
+        identifier: raw_gz_sales # BigQuery'deki GERÇEK tablo adı
+      - name: product
+        identifier: raw_gz_product
+      - name: ship
+        identifier: raw_gz_ship
